@@ -1,0 +1,13 @@
+var gulp = require('gulp'); 
+var sass = require('gulp-sass');
+
+gulp.task('scss', function(){
+    return gulp.src('app/scss/main.scss')
+    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(gulp.dest('app/css/', {overwrite: false}))
+});
+
+gulp.task('watch', function(){
+    gulp.watch('app/scss/**/*.scss', ['scss']); 
+    // Other watchers
+})
