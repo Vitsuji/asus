@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: $header-font;
+    font-weight: 100;
+}
+
+h3, h4, h5, h6, a, p {
+    font-family: $content-font;
+    font-weight: normal;
+}

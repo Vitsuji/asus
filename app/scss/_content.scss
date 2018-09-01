@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+}
+
+.content {
+    padding-top: 58px;
+    text-align: center;
+    width: 100%;
+    height: 800px;
+    
+
+    .front_text {
+        font-weight: 100;
+        padding: 50px 0 0 0;
+        font-size: 40px;
+        bottom: 230px;
+
+        @include mobile {
+            margin-top: calc(78vh - 400px);
+        }
+        @include tablet {
+            margin-top: 220px;
+        }
+
+        @include desktop {
+            text-align: center;
+            margin-top: 220px;
+        }
+
+        @include medium-desktop {
+            position: absolute;
+            right: 200px;
+        }
+
+        @include large-desktop {
+            left: 400px;
+        }
+
+        @include quadhd {
+            left: 600px;
+        }
+    }
+
+    .front {
+        background: url(https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/00/fg00.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* float: right; */
+        height: 360px;
+        /* margin-top: 47vh; */
+        /* margin-left: 5%; */
+
+        /* bottom: 0; */
+        position: absolute; 
+
+        @include mobile {
+            margin-left: 2.5%;
+            width: 95vw;
+        }
+
+        @include not_mobile {
+            width: 80vw;
+            margin-left: 10%;
+            bottom: 9vh;  
+        }
+
+        @include tablet {
+            bottom: 3vh !important;
+        }
+        @include desktop {
+            background-position: center;
+            margin-left: calc((100% - 80vw)/2);
+        }
+    }
+
+    .main_info {
+        
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+
+        @include mobile {
+            top: 78vh;
+        }
+
+        @include not_mobile {
+            top: 90vh;
+        }
+
+        .gradient {
+            padding-top: 100px;
+            height: 100px;
+    
+            background-image:
+            linear-gradient(
+              #d3d3d3 10%, #fff 90%
+            );
+            -webkit-filter: blur(3px);
+        }
+
+        .block_itself {
+            background: #00A8FF;
+            width: 20%;
+            height: 5px;
+            margin: 0 auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+        .block {
+            background: #00A8FF;
+            width: 20%;
+            height: 5px;
+            margin: 0 auto;
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+            &:after {
+                background: #00A8FF;
+                width: 30%;
+                content: "";
+                height: 10px;
+                position: absolute;
+                right: 0;
+            }
+
+            &:before {
+                background: #00A8FF;
+                width: 30%;
+                content: "";
+                height: 10px;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        .characteristics {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+
+            .item {
+                padding: 20px;
+                border-right: 0.5px solid $dark;
+                border-left: 0.5px solid $dark;
+
+                @include mobile {
+                    width: 90vw;
+                }
+
+                h2 {
+                    //font-size: 40px;
+                }
+
+                h4 {
+                    color: $grey
+                }
+            }
+        }
+
+    } 
+    
+    .section {
+        text-align: center;
+
+        @include tablet {
+            margin: 20px 5%;
+        }
+        @include desktop {
+            margin: 40px 10%;
+        }
+
+        @include medium-desktop {
+            margin: 50px 20%;
+        }
+
+            h1 {
+                font-weight: normal;
+                line-height: 65px;
+                padding-bottom: 10px;
+                letter-spacing: 0.3px;
+
+                @include not_mobile {
+                    font-size: 58px;
+                }
+            }
+
+            h3 {
+                color: $grey;
+                padding: 30px;
+            }
+
+            .fill_img {
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                width: 60vw;
+                background-size: contain !important;
+                height: 80vh;
+                margin: 0 auto;
+
+                @include mobile {
+                    height: 30vh;
+                }
+
+            }
+
+            .spec_info {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .item {
+                    padding: 20px;
+
+                    &:not(:last-child) {
+                        border-right: 1px solid $grey;
+                    }
+                }
+                
+            }
+            &.first_section {
+                .fill_img {
+                    background: url('https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/01/fg01.png');
+                }
+            }
+    
+            &.second_section {
+                .fill_img {
+                    background: url('https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/02/00/fg01.jpg');
+                    
+                }
+            }
+            &.fourth_section {
+                margin-bottom: 400px;
+                .fill_img {
+
+                    @include mobile {
+                        width: 45% !important;
+                    }
+                    @include not_mobile {
+                        width: 30% !important;
+                    }
+                    
+                    //margin-left: 40px;
+                    position: absolute;
+                    &.one {
+                        @include mobile {
+                            left: 2%;
+                        }
+
+                        @include tablet {
+                            left: 10%;
+                        }
+
+                        @include desktop {
+                            margin-left: 5%;
+                        }
+                        
+                        height: 200px;
+                        background: url('https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/06/00/fg01.png');
+                    }
+                    &.two {
+                        height: 300px;
+                        z-index: 2;
+                        margin-left: 15%;
+                        background: url('https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/06/00/fg03.png');
+
+                        @include mobile {
+                            left: 12.5%;;
+                        }
+                        @include tablet {
+                            left: 20%;
+                        }
+                        @include desktop {
+                            margin-left: 25%;
+                        }
+                    }
+                   
+                    &.three {
+                        height: 200px;
+                        margin-left: 30%;
+                        background: url('https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/06/00/fg02.png');
+
+                        @include mobile {
+                            right: 2%;
+                        }
+                        @include tablet {
+                            right: 10%;
+                        }
+
+                        @include desktop {
+                            margin-left: 45%;
+                        }
+                    }
+                    
+                }
+            }
+
+            &.fifth_section {
+                text-align: left;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 20px 10%;
+
+                .spec_info {
+                    justify-content: left !important;
+
+                    .item {
+                        margin-top: 0 !important;
+                    }
+                }
+                .item:not(.spec_info .item) {
+                    width: 100%;
+                    margin-top: 35vh;
+                }
+                .fill_img {
+                    position: absolute;
+                    right: 5%;
+
+                    background: url('https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/07/fg00.png');
+
+                    @include mobile {
+                        width: 90% !important;
+                    }
+
+                    @include not_mobile {
+                        width: 60% !important;
+                    }
+                }
+            }
+
+        }
+    }
+

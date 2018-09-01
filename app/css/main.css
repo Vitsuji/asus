@@ -1,0 +1,328 @@
+/* [============] Mixins [============] */
+/* [============] Imports [============] */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  margin: 0; }
+
+h1, h2 {
+  font-family: "Segoe UI Light", sans-serif;
+  font-weight: 100; }
+
+h3, h4, h5, h6, a, p {
+  font-family: "Segoe UI Light", sans-serif;
+  font-weight: normal; }
+
+nav {
+  width: calc( 100% - 40px);
+  padding: 0 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.8;
+  position: fixed; }
+  nav a {
+    text-decoration: none;
+    color: black; }
+    @media (max-width: 680px) {
+      nav a:first-child {
+        margin-left: calc((100% - 100px)/2); } }
+    nav a.link {
+      display: inline-block;
+      padding: 20px 30px;
+      font-size: 16px;
+      vertical-align: middle; }
+    @media (max-width: 680px) {
+      nav a:not(.mob):not(:first-child) {
+        display: none; } }
+    @media (min-width: 680px) {
+      nav a:not(.mob):not(:first-child) {
+        display: inline-block; } }
+    nav a.link.right {
+      position: fixed;
+      right: 0; }
+    nav a.link.left {
+      position: fixed;
+      left: 0; }
+      nav a.link.left.mob {
+        font-size: 25px;
+        padding: 10px 30px; }
+        @media (max-width: 680px) {
+          nav a.link.left.mob {
+            display: inline-block; } }
+        @media (min-width: 680px) {
+          nav a.link.left.mob {
+            display: none; } }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #484848;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px; }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px; }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    transition: 0.3s; }
+    .sidenav a:not(:first-child) {
+      border-bottom: 0.4px solid #d7d7d7;
+      padding: 25px; }
+    .sidenav a:hover {
+      color: #f1f1f1; }
+
+.home {
+  width: 100px;
+  height: 50px; }
+
+* {
+  margin: 0; }
+
+.content {
+  padding-top: 58px;
+  text-align: center;
+  width: 100%;
+  height: 800px; }
+  .content .front_text {
+    font-weight: 100;
+    padding: 50px 0 0 0;
+    font-size: 40px;
+    bottom: 230px; }
+    @media (max-width: 680px) {
+      .content .front_text {
+        margin-top: calc(78vh - 400px); } }
+    @media (min-width: 680px) and (max-width: 1023px) {
+      .content .front_text {
+        margin-top: 220px; } }
+    @media (min-width: 1024px) and (max-width: 1300px) {
+      .content .front_text {
+        text-align: center;
+        margin-top: 220px; } }
+    @media (min-width: 1300px) and (max-width: 1600px) {
+      .content .front_text {
+        position: absolute;
+        right: 200px; } }
+    @media (min-width: 1600px) and (max-width: 1920px) {
+      .content .front_text {
+        left: 400px; } }
+    @media (min-width: 1920px) and (max-width: 3840px) {
+      .content .front_text {
+        left: 600px; } }
+  .content .front {
+    background: url(https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/00/fg00.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* float: right; */
+    height: 360px;
+    /* margin-top: 47vh; */
+    /* margin-left: 5%; */
+    /* bottom: 0; */
+    position: absolute; }
+    @media (max-width: 680px) {
+      .content .front {
+        margin-left: 2.5%;
+        width: 95vw; } }
+    @media (min-width: 680px) {
+      .content .front {
+        width: 80vw;
+        margin-left: 10%;
+        bottom: 9vh; } }
+    @media (min-width: 680px) and (max-width: 1023px) {
+      .content .front {
+        bottom: 3vh !important; } }
+    @media (min-width: 1024px) and (max-width: 1300px) {
+      .content .front {
+        background-position: center;
+        margin-left: calc((100% - 80vw)/2); } }
+  .content .main_info {
+    position: absolute;
+    width: 100%;
+    z-index: -1; }
+    @media (max-width: 680px) {
+      .content .main_info {
+        top: 78vh; } }
+    @media (min-width: 680px) {
+      .content .main_info {
+        top: 90vh; } }
+    .content .main_info .gradient {
+      padding-top: 100px;
+      height: 100px;
+      background-image: linear-gradient(#d3d3d3 10%, #fff 90%);
+      -webkit-filter: blur(3px); }
+    .content .main_info .block_itself {
+      background: #00A8FF;
+      width: 20%;
+      height: 5px;
+      margin: 0 auto;
+      margin-top: 5%;
+      margin-bottom: 5%; }
+    .content .main_info .block {
+      background: #00A8FF;
+      width: 20%;
+      height: 5px;
+      margin: 0 auto;
+      margin-top: 5%;
+      margin-bottom: 5%; }
+      .content .main_info .block:after {
+        background: #00A8FF;
+        width: 30%;
+        content: "";
+        height: 10px;
+        position: absolute;
+        right: 0; }
+      .content .main_info .block:before {
+        background: #00A8FF;
+        width: 30%;
+        content: "";
+        height: 10px;
+        position: absolute;
+        left: 0; }
+    .content .main_info .characteristics {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px; }
+      .content .main_info .characteristics .item {
+        padding: 20px;
+        border-right: 0.5px solid #484848;
+        border-left: 0.5px solid #484848; }
+        @media (max-width: 680px) {
+          .content .main_info .characteristics .item {
+            width: 90vw; } }
+        .content .main_info .characteristics .item h4 {
+          color: #898989; }
+  .content .section {
+    text-align: center; }
+    @media (min-width: 680px) and (max-width: 1023px) {
+      .content .section {
+        margin: 20px 5%; } }
+    @media (min-width: 1024px) and (max-width: 1300px) {
+      .content .section {
+        margin: 40px 10%; } }
+    @media (min-width: 1300px) and (max-width: 1600px) {
+      .content .section {
+        margin: 50px 20%; } }
+    .content .section h1 {
+      font-weight: normal;
+      line-height: 65px;
+      padding-bottom: 10px;
+      letter-spacing: 0.3px; }
+      @media (min-width: 680px) {
+        .content .section h1 {
+          font-size: 58px; } }
+    .content .section h3 {
+      color: #898989;
+      padding: 30px; }
+    .content .section .fill_img {
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      width: 60vw;
+      background-size: contain !important;
+      height: 80vh;
+      margin: 0 auto; }
+      @media (max-width: 680px) {
+        .content .section .fill_img {
+          height: 30vh; } }
+    .content .section .spec_info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .content .section .spec_info .item {
+        padding: 20px; }
+        .content .section .spec_info .item:not(:last-child) {
+          border-right: 1px solid #898989; }
+    .content .section.first_section .fill_img {
+      background: url("https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/01/fg01.png"); }
+    .content .section.second_section .fill_img {
+      background: url("https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/02/00/fg01.jpg"); }
+    .content .section.fourth_section {
+      margin-bottom: 400px; }
+      .content .section.fourth_section .fill_img {
+        position: absolute; }
+        @media (max-width: 680px) {
+          .content .section.fourth_section .fill_img {
+            width: 45% !important; } }
+        @media (min-width: 680px) {
+          .content .section.fourth_section .fill_img {
+            width: 30% !important; } }
+        .content .section.fourth_section .fill_img.one {
+          height: 200px;
+          background: url("https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/06/00/fg01.png"); }
+          @media (max-width: 680px) {
+            .content .section.fourth_section .fill_img.one {
+              left: 2%; } }
+          @media (min-width: 680px) and (max-width: 1023px) {
+            .content .section.fourth_section .fill_img.one {
+              left: 10%; } }
+          @media (min-width: 1024px) and (max-width: 1300px) {
+            .content .section.fourth_section .fill_img.one {
+              margin-left: 5%; } }
+        .content .section.fourth_section .fill_img.two {
+          height: 300px;
+          z-index: 2;
+          margin-left: 15%;
+          background: url("https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/06/00/fg03.png"); }
+          @media (max-width: 680px) {
+            .content .section.fourth_section .fill_img.two {
+              left: 12.5%; } }
+          @media (min-width: 680px) and (max-width: 1023px) {
+            .content .section.fourth_section .fill_img.two {
+              left: 20%; } }
+          @media (min-width: 1024px) and (max-width: 1300px) {
+            .content .section.fourth_section .fill_img.two {
+              margin-left: 25%; } }
+        .content .section.fourth_section .fill_img.three {
+          height: 200px;
+          margin-left: 30%;
+          background: url("https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/06/00/fg02.png"); }
+          @media (max-width: 680px) {
+            .content .section.fourth_section .fill_img.three {
+              right: 2%; } }
+          @media (min-width: 680px) and (max-width: 1023px) {
+            .content .section.fourth_section .fill_img.three {
+              right: 10%; } }
+          @media (min-width: 1024px) and (max-width: 1300px) {
+            .content .section.fourth_section .fill_img.three {
+              margin-left: 45%; } }
+    .content .section.fifth_section {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 20px 10%; }
+      .content .section.fifth_section .spec_info {
+        justify-content: left !important; }
+        .content .section.fifth_section .spec_info .item {
+          margin-top: 0 !important; }
+      .content .section.fifth_section .item {
+        width: 100%;
+        margin-top: 35vh; }
+      .content .section.fifth_section .fill_img {
+        position: absolute;
+        right: 5%;
+        background: url("https://dlcdnimgs.asus.com/websites/global/products/cp7UN9BtMU7UNPWc/img/07/fg00.png"); }
+        @media (max-width: 680px) {
+          .content .section.fifth_section .fill_img {
+            width: 90% !important; } }
+        @media (min-width: 680px) {
+          .content .section.fifth_section .fill_img {
+            width: 60% !important; } }
+
+footer {
+  width: 100%;
+  background-image: linear-gradient(#fff 10%, #d3d3d3 90%);
+  height: 400px; }

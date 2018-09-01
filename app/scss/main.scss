@@ -1,0 +1,82 @@
+$expanse-color: #fff;
+$elapse-color: #d7d7d7;
+$dark: #484848;
+$grey: #898989;
+
+$header-font: 'Segoe UI Light', sans-serif;
+$content-font: 'Segoe UI Light', sans-serif;
+
+
+$bp-mobile-break: 480px;
+$bp-mobile: 680px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-min-desktop: 1300px;
+$bp-max-desktop: 1600px;
+$bp-widescreen: 1920px;
+$bp-quadhd: 3840px;
+
+/* [============] Mixins [============] */
+@mixin breaking_mobile {
+  @media (max-width: #{$bp-mobile-break}){
+   @content;
+ }
+}
+
+@mixin mobile {
+   @media (max-width: #{$bp-mobile}){
+    @content;
+  }
+}
+
+@mixin not_mobile {
+   @media (min-width: #{$bp-mobile}){
+    @content;
+  }
+}
+
+@mixin tablet {
+   @media (min-width: #{$bp-mobile}) and (max-width: #{$bp-desktop - 1px}){
+    @content;
+  }
+}
+
+@mixin desktop {
+   @media (min-width: #{$bp-desktop}) and (max-width: #{$bp-min-desktop}){
+    @content;
+  }
+}
+
+@mixin medium-desktop {
+   @media (min-width: #{$bp-min-desktop}) and (max-width: #{$bp-max-desktop}){
+    @content;
+  }
+}
+
+@mixin large-desktop {
+   @media (min-width: #{$bp-max-desktop}) and (max-width: #{$bp-widescreen}){
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media (min-width: #{$bp-widescreen}) {
+   @content;
+ }
+}
+
+@mixin quadhd {
+  @media (min-width: #{$bp-widescreen}) and (max-width: #{$bp-quadhd}) {
+   @content;
+ }
+}
+
+/* [============] Imports [============] */
+
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import "general";
+@import "nav";
+@import "content";
+@import "footer";
